@@ -1,0 +1,24 @@
+body {
+    display: flex;
+}
+
+form
+{
+    position: relative;
+    z-index: 1;
+
+    box-sizing: border-box;
+    width: 250px;
+    padding: 25px;
+
+    box-shadow: 0 0 10px var(--color-shadow);
+}
+
+iframe
+{
+    width: calc(100vw - 250px);
+    height: 100vh;
+    padding: 0;
+
+    background-color: var(--color-yandex);
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Submit form to iframe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="lib/theme.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="lib/iframe.css" />
+    <script src="lib/iframe.js"></script>
+</head>
+
+<body>
+    <form action="https://yandex.ru/search/" method="GET" target="search-result">
+        <input type="search" name="text" placeholder="Поисковый запрос" required>
+        <button type="submit">Найти</button>
+    </form>
+    <iframe src="" frameborder="0" name="search-result"></iframe>
+</body>
+
+</html>

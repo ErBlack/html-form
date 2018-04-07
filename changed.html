@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Changes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="lib/theme.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="lib/changed.css" />
+</head>
+
+<body>
+    <div id="total"></div>
+    <div id="changed"></div>
+    <form id="form">
+        <label for="firstname">Имя</label>
+        <input type="text" name="firstname" id="firstname">
+        <label for="lastname">Фамилия</label>
+        <input type="text" name="lastname" id="firstname">
+        <fieldset>
+            <legend>Настроение</legend>
+            <label>
+                <input type="radio" name="mood"> 😀</label>
+            <label>
+                <input type="radio" name="mood" checked> 😐</label>
+            <label>
+                <input type="radio" name="mood"> 😢</label>
+        </fieldset>
+        <fieldset>
+            <legend>Еда</legend>
+            <label>
+                <input type="checkbox" name="order">🍕</label>
+            <label>
+                <input type="checkbox" name="order">🌭</label>
+            <label>
+                <input type="checkbox" name="order">🍔</label>
+            <label>
+                <input type="checkbox" name="order">🍟</label>
+            <label>
+                <input type="checkbox" name="order">🥞</label>
+            <label>
+                <input type="checkbox" name="order">🥐</label>
+            <label>
+                <input type="checkbox" name="order">🥩</label>
+            <label>
+                <input type="checkbox" name="order">🥟</label>
+            <label>
+                <input type="checkbox" name="order">🥪</label>
+            <label>
+                <input type="checkbox" name="order">🌮</label>
+        </fieldset>
+        <label for="drink">Напиток</label>
+        <select name="drink" id="drink">
+            <option value="☕">☕ Кофе</option>
+            <option value="🍷">🍷 Вино</option>
+            <option value="🍸">🍸 Мартини</option>
+            <option value="🥛" selected>🥛 Молоко</option>
+            <option value="🍺">🍺 Пиго</option>
+            <option value="🍹">🍹 Коктейль</option>
+        </select>
+        <textarea name="loem" rows="3">Съешь ещё этих мягких французских булок да выпей же чаю</textarea>
+
+        <button type="reset">Сбросить</button>
+    </form>
+    <script src="lib/changed.js"></script>
+</body>
+
+</html>

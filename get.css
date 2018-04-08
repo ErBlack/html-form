@@ -1,8 +1,8 @@
 @import "styles/theme.css" screen;
+@import "styles/font.css" screen;
 
 body {
   background-color: var(--color-yandex);
-  font-size: calc((100vw - 480px) * 26 / 2080 + 28px);
 }
 
 code {

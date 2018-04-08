@@ -1,0 +1,12 @@
+select {
+  display: inline-block;
+
+  box-sizing: border-box;
+  height: var(--field-height);
+  padding: var(--field-padding);
+
+  border: var(--field-border);
+  border-radius: var(--field-border-radius);
+
+  font-size: inherit;
+}

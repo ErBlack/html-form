@@ -1,0 +1,41 @@
+@import "styles/theme.css" screen;
+@import "styles/layout.css" screen;
+@import "styles/font.css" screen;
+@import "styles/fields.css" screen;
+@import "styles/form.css" screen;
+
+form
+{
+    position: relative;
+    z-index: 1;
+
+    box-shadow: 0 0 10px var(--color-shadow);
+}
+
+iframe
+{
+    padding: 0;
+}
+
+label
+{
+    display: flex;
+
+    margin-bottom: 0.5em;
+}
+
+.caption
+{
+    flex: 0 0 7em;
+
+    margin-right: 0.5em;
+
+    line-height: 1.5em;
+}
+
+input:not([type="radio"]):not([type="checkbox"]):not([type="color"]),
+select,
+textarea
+{
+    flex: 1 0 auto;
+}

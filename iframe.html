@@ -5,17 +5,34 @@
     <meta charset="utf-8" />
     <title>Submit form to iframe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="lib/theme.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="lib/iframe.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="iframe.css" />
     <script src="lib/iframe.js"></script>
 </head>
 
-<body>
-    <form action="https://yandex.ru/search/" method="GET" target="search-result">
-        <input type="search" name="text" placeholder="Поисковый запрос" required>
-        <button type="submit">Найти</button>
+<body class="article">
+    <form action="get.html" method="GET" class="section" target="form-result">
+        <select name="select">
+            <optgroup label="Наземный транспорт">
+                <option value="car">🚗 Машина</option>
+                <option value="police">🚓 Полицейская машина</option>
+                <option value="taxi" selected>🚕 Такси</option>
+            </optgroup>
+            <optgroup label="Водный транспорт" disabled>
+                <option value="car">⛵ Парусник</option>
+                <option value="police">🚤 Яхта</option>
+                <option value="taxi">🚢 Паром</option>
+            </optgroup>
+            <optgroup label="Воздушный транспорт">
+                <option value="helicopter">🚁 Вертолёт</option>
+                <option value="plane">🛫 Самолёт</option>
+                <option value="rocket" disabled>🚀 Ракета</option>
+                <option value="ufo" disabled>🛸 Нло</option>
+            </optgroup>
+        </select>
+
+        <button type="submit">Submit</button>
     </form>
-    <iframe src="" frameborder="0" name="search-result"></iframe>
+    
 </body>
 
 </html>

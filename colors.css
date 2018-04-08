@@ -1,0 +1,11 @@
+@import "styles/theme.css" screen;
+@import "styles/layout.css" screen;
+@import "styles/font.css" screen;
+@import "styles/fields.css" screen;
+@import "styles/form.css" screen;
+
+input[type="color"]
+{
+    width: 250px;
+    height: 250px;
+}

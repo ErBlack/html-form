@@ -1,0 +1,4 @@
+body {
+  font-size: calc((100vw - 480px) * 22 / 2080 + 14px);
+  font-family: sans-serif;
+}

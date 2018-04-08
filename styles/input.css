@@ -1,0 +1,38 @@
+input {
+  display: inline-block;
+
+  font-size: inherit;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="radio"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  box-sizing: border-box;
+  height: var(--field-height);
+  padding: var(--field-padding);
+
+  border: var(--field-border);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  height: var(--field-height);
+  margin: 0;
+
+  transform: scale(1.5);
+}
+
+input::-webkit-inner-spin-button {
+  height: var(--field-height);
+}

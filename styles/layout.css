@@ -1,0 +1,19 @@
+.article
+{
+    display: flex;
+
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.section
+{
+    flex: 0 0 50%;
+}
+
+@media all and (orientation: portrait) {
+    .article
+    {
+        flex-direction: column;
+    }
+}

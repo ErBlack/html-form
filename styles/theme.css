@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  --color-yandex: #ffcc00;
+  --color-shadow: rgba(0, 0, 0, 0.3);
+
+  --field-height: 1.5em;
+  --field-border-radius: 0.15em;
+  --field-border: solid 1px black;
+  --field-left-right-padding: 0.5em;
+  --field-padding: 0 var(--field-left-right-padding);
+}

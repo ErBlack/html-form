@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="get.css" />
+</head>
+
+<body>
+    <code id="query"></code>
+    <script>
+        const query = location.search
+            .slice(1)
+            .split('&')
+            .filter(Boolean)
+            .map((s) => s.split('=').map(decodeURIComponent))
+            .reduce((result, [name, value = '']) => {
+                result[name] = value;
+
+                return result;
+            }, {});
+
+        document.getElementById('query').innerText = JSON.stringify(query, null, 4);
+    </script>
+</body>
+
+</html>

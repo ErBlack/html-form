@@ -1,0 +1,8 @@
+textarea {
+  box-sizing: border-box;
+  padding: .1em var(--field-left-right-padding);
+
+  border: var(--field-border);
+
+  font-size: inherit;
+}

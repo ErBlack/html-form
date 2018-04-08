@@ -1,4 +1,4 @@
-const form = document.getElementById('form');
+const form = document.forms[0];
 const length = document.getElementById('length');
 const changed = document.getElementById('changed');
 const total = document.getElementById('total');
@@ -20,6 +20,8 @@ function isChanged(element) {
             switch (element.type) {
                 case 'reset':
                 case 'submit':
+                case 'button':
+                case 'image':
                     return false;
                 case 'checkbox':
                 case 'radio':

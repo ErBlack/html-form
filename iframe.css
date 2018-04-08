@@ -1,0 +1,18 @@
+@import "styles/theme.css" screen;
+@import "styles/layout.css" screen;
+@import "styles/font.css" screen;
+@import "styles/fields.css" screen;
+@import "styles/form.css" screen;
+
+form
+{
+    position: relative;
+    z-index: 1;
+
+    box-shadow: 0 0 10px var(--color-shadow);
+}
+
+iframe
+{
+    padding: 0;
+}

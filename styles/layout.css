@@ -2,16 +2,30 @@
 {
     display: flex;
 
-    min-width: 100vw;
+    width: 100vw;
     min-height: 100vh;
 }
 
 .section
 {
-    flex: 0 0 50%;
+    flex: 0 0 auto;
+
+    box-sizing: border-box;
+}
+
+@media all and (orientation: landscape) {
+    .section
+    {
+        width: 50vw;
+    }
 }
 
 @media all and (orientation: portrait) {
+    .section
+    {
+        width: 100vw;
+    }
+
     .article
     {
         flex-direction: column;

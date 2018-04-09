@@ -60,30 +60,32 @@ class Color {
     }
     get HSL() {
         const [r, g, b] = this._rgb.map((number) => number / 255);
-        const min = Math.min(r, g, b);
+
         const max = Math.max(r, g, b);
-        const delta = max - min;
+        const min = Math.min(r, g, b);
 
-        let h = 0;
+        const l = (max + min) / 2;
         let s = 0;
-        let l = (max + min) / 2;
+        let h = 0;
 
-        if (delta !== 0) {
-            s = l < 0.5 ?
-                delta / (max + min) :
-                delta / (2 - max - min);
-
-            if (max === r) {
-                h = (g - b) / delta;
-            } else if (g === max) {
-                h = 2 + (b - r) / delta;
+        if (max != min) {
+            if (l < 0.5) {
+                s = (max - min) / (max + min);
             } else {
-                h = (4 + (r - g) / delta) * 60;
+                s = (max - min) / (2.0 - max - min);
+            }
+
+            if (r == max) {
+                h = (g - b) / (max - min);
+            } else if (g == max) {
+                h = 2.0 + (b - r) / (max - min);
+            } else {
+                h = 4.0 + (r - g) / (max - min);
             }
         }
 
         return [
-            h,
+            h < 0 ? 360 : Math.floor(h * 60),
             Math.floor(s * 100),
             Math.floor(l * 100)
         ];

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Validation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="lib/plural.js"></script>
+    <script src="lib/isField.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="validation.css" />
+</head>
+
+<body class="article">
+    <form action="get.html" method="GET" class="section" target="form-result">
+        <div id="total"></div>
+        <div id="valid"></div>
+
+        <label class="row">
+            <span class="caption">Обязательное</span>
+            <input type="text" name="required" required>
+        </label>
+
+        <label class="row">
+            <span class="caption">От 5 до 10 символов</span>
+            <input type="text" name="length" minlength="5" maxlength="10">
+        </label>
+
+        <label class="row">
+            <span class="caption">От 5 до 10</span>
+            <input type="number" name="number" min="5" max="10">
+        </label>
+
+        <label class="row">
+            <span class="caption">\D</span>
+            <input type="text" name="pattern" pattern="\D" title="Никаких цифр">
+        </label>
+
+        <label class="row">
+            <span class="caption">Почта</span>
+            <input type="email" name="email">
+        </label>
+
+        <label class="row">
+            <span class="caption">Делится на 7</span>
+            <input type="text" id="custom" name="custom">
+        </label>
+
+        <button type="reset">Сбросить</button>
+        <button type="submit">Сохранить</button>
+    </form>
+    <iframe src="get.html" frameborder="0" name="form-result" class="section"></iframe>
+    <script src="validation.js"></script>
+</body>
+
+</html>

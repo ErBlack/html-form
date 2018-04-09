@@ -1,12 +1,3 @@
-const form = document.forms[0];
-const length = document.getElementById('length');
-const changed = document.getElementById('changed');
-const total = document.getElementById('total');
-
-const FIELD_FORMS = ['поле', 'поля', 'полей'];
-const FIELDSET_FORMS = ['филдсет', 'филдсета', 'филдсетов'];
-const CHANGED_FORMS = ['изменено', 'изменены', 'изменено'];
-
 function isChanged(element) {
     switch (element.nodeName) {
         case 'FORM':
@@ -33,6 +24,15 @@ function isChanged(element) {
             return false;
     }
 }
+
+const form = document.forms[0];
+const length = document.getElementById('length');
+const changed = document.getElementById('changed');
+const total = document.getElementById('total');
+
+const FIELD_FORMS = ['поле', 'поля', 'полей'];
+const FIELDSET_FORMS = ['филдсет', 'филдсета', 'филдсетов'];
+const CHANGED_FORMS = ['изменено', 'изменены', 'изменено'];
 
 function isField(element) {
     switch (element.nodeName) {
@@ -80,7 +80,13 @@ function updateStats() {
     const changedFields = fields.filter((element) => {
         const changed = isChanged(element);
 
-        element.title = changed ? 'Значение поля измененно' : 'У поля значение по умолчанию';
+        if (changed) {
+            element.title = 'Значение поля измененно';
+            element.classList.add('changed');
+        } else {
+            element.title = 'У поля значение по умолчанию';
+            element.classList.remove('changed')
+        }
 
         return changed;
     });
@@ -93,6 +99,12 @@ function updateStats() {
             changedFields.length,
             CHANGED_FORMS
         )}`;
+
+        if (changedFields.length) {
+            element.classList.add('changed');
+        } else {
+            element.classList.remove('changed')
+        }
 
         return changed;
     })

@@ -3,8 +3,63 @@
 @import "styles/font.css" screen;
 @import "styles/fields.css" screen;
 @import "styles/form.css" screen;
+@import "styles/label.css" screen;
 
-form
+#changed
 {
-    padding: 25px;
+    margin-bottom: 1em;
+}
+
+label
+{
+    display: flex;
+    align-items: baseline;
+
+    cursor: pointer;
+}
+
+.row
+{
+    margin-bottom: 1em; 
+}
+
+.caption
+{
+    flex: 0 0 7em;
+}
+
+.grid
+{
+    display: grid;
+
+    margin-right: -1em;
+
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+textarea,
+input[type="text"],
+select
+{
+    flex-grow: 1;
+}
+
+input[type="radio"],
+input[type="checkbox"]
+{
+    margin-right: .5em;
+}
+
+input.changed,
+select.changed,
+textarea.changed
+{
+    box-shadow: 0 0 1em gold;
+}
+
+fieldset.changed
+{
+    border-style: solid;
+    border-color: gold;
 }

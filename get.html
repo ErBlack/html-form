@@ -16,7 +16,11 @@
             .filter(Boolean)
             .map((s) => s.split('=').map(decodeURIComponent))
             .reduce((result, [name, value = '']) => {
-                result[name] = value;
+                if (result[name]) {
+                    result[name] = [].concat(result[name], value);
+                } else {
+                    result[name] = value;
+                }
 
                 return result;
             }, {});

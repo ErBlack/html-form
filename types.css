@@ -3,17 +3,11 @@
 @import "styles/font.css" screen;
 @import "styles/fields.css" screen;
 @import "styles/form.css" screen;
+@import "styles/label.css" screen;
 
 iframe
 {
     padding: 0;
-}
-
-label
-{
-    display: flex;
-
-    margin-bottom: 0.5em;
 }
 
 .caption
@@ -32,4 +26,9 @@ textarea
     flex: 1 0 auto;
 
     max-width: calc(100% - 7em);
+}
+
+label
+{
+    margin-bottom: 0.5em;
 }

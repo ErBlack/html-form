@@ -12,54 +12,74 @@
     <form action="get.html" method="GET" class="section" target="form-result">
         <div id="total"></div>
         <div id="changed"></div>
-        <label for="firstname">Имя</label>
-        <input type="text" name="firstname" id="firstname">
-        <label for="lastname">Фамилия</label>
-        <input type="text" name="lastname" id="firstname">
-        <fieldset>
+        <label class="row">
+            <span class="caption">Имя</span>
+            <input type="text" name="firstname" id="firstname">
+        </label>
+        <label class="row">
+            <span class="caption">Фамилия</span>
+            <input type="text" name="lastname">
+        </label>
+
+        <fieldset class="row">
             <legend>Настроение</legend>
-            <label>
-                <input type="radio" name="mood"> 😀</label>
-            <label>
-                <input type="radio" name="mood" checked> 😐</label>
-            <label>
-                <input type="radio" name="mood"> 😢</label>
+            <div class="grid">
+                <label>
+                    <input type="radio" name="mood" value="😀">😀</label>
+                <label>
+                    <input type="radio" name="mood" value="🙂" checked>🙂</label>
+                <label>
+                    <input type="radio" name="mood" value="😐">😐</label>
+                <label>
+                    <input type="radio" name="mood" value="🙁">🙁</label>
+                <label>
+                    <input type="radio" name="mood" value="😢">😢</label>
+
+            </div>
         </fieldset>
-        <fieldset>
+        <fieldset class="row">
             <legend>Еда</legend>
-            <label>
-                <input type="checkbox" name="order">🍕</label>
-            <label>
-                <input type="checkbox" name="order">🌭</label>
-            <label>
-                <input type="checkbox" name="order">🍔</label>
-            <label>
-                <input type="checkbox" name="order">🍟</label>
-            <label>
-                <input type="checkbox" name="order">🥞</label>
-            <label>
-                <input type="checkbox" name="order">🥐</label>
-            <label>
-                <input type="checkbox" name="order">🥩</label>
-            <label>
-                <input type="checkbox" name="order">🥟</label>
-            <label>
-                <input type="checkbox" name="order">🥪</label>
-            <label>
-                <input type="checkbox" name="order">🌮</label>
+            <div class="grid">
+                <label>
+                    <input type="checkbox" name="order" value="🍕">🍕</label>
+                <label>
+                    <input type="checkbox" name="order" value="🌭">🌭</label>
+                <label>
+                    <input type="checkbox" name="order" value="🍔">🍔</label>
+                <label>
+                    <input type="checkbox" name="order" value="🍟">🍟</label>
+                <label>
+                    <input type="checkbox" name="order" value="🥞">🥞</label>
+                <label>
+                    <input type="checkbox" name="order" value="🥐">🥐</label>
+                <label>
+                    <input type="checkbox" name="order" value="🥩">🥩</label>
+                <label>
+                    <input type="checkbox" name="order" value="🥟">🥟</label>
+                <label>
+                    <input type="checkbox" name="order" value="🥪">🥪</label>
+                <label>
+                    <input type="checkbox" name="order" value="🌮">🌮</label>
+            </div>
         </fieldset>
-        <label for="drink">Напиток</label>
-        <select name="drink" id="drink">
-            <option value="☕">☕ Кофе</option>
-            <option value="🍷">🍷 Вино</option>
-            <option value="🍸">🍸 Мартини</option>
-            <option value="🥛" selected>🥛 Молоко</option>
-            <option value="🍺">🍺 Пиго</option>
-            <option value="🍹">🍹 Коктейль</option>
-        </select>
-        <textarea name="loem" rows="3">Съешь ещё этих мягких французских булок да выпей же чаю</textarea>
+        <label class="row">
+            <span class="caption">Напиток</span>
+            <select name="drink">
+                <option value="☕">☕ Кофе</option>
+                <option value="🍷">🍷 Вино</option>
+                <option value="🍸">🍸 Мартини</option>
+                <option value="🥛" selected>🥛 Молоко</option>
+                <option value="🍺">🍺 Пиго</option>
+                <option value="🍹">🍹 Коктейль</option>
+            </select>
+        </label>
+        <label class="row">
+            <span class="caption">Комментарий</span>
+            <textarea name="loem" rows="3">Съешь ещё этих мягких французских булок да выпей же чаю</textarea>
+        </label>
 
         <button type="reset">Сбросить</button>
+        <button type="submit">Сохранить</button>
     </form>
     <iframe src="get.html" frameborder="0" name="form-result" class="section"></iframe>
     <script src="changed.js"></script>

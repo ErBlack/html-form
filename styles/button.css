@@ -3,9 +3,22 @@ button {
     height: var(--field-height);
     padding: var(--field-padding);
 
+    cursor: pointer;
+    transition: background-color ease-out .2s;
+
     border: var(--field-border);
     border-radius: var(--field-border-radius);
     background-color: #fff;
 
     font-size: inherit;
+}
+
+button:hover
+{
+    background-color: rgba(0,0,0,.05);
+}
+
+button:active
+{
+    background-color: rgba(0,0,0,.1);
 }

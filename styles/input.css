@@ -12,7 +12,6 @@ input[type="email"],
 input[type="month"],
 input[type="number"],
 input[type="password"],
-input[type="radio"],
 input[type="search"],
 input[type="tel"],
 input[type="time"],
@@ -27,7 +26,6 @@ input[type="week"] {
 
 input[type="checkbox"],
 input[type="radio"] {
-  height: var(--field-height);
   margin: 0;
 
   transform: scale(1.5);

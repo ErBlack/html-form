@@ -6,13 +6,15 @@
 
 form
 {
-    position: relative;
-    z-index: 1;
-
-    box-shadow: 0 0 10px var(--color-shadow);
+    display: flex;
 }
 
 iframe
 {
     padding: 0;
+}
+
+select
+{
+    margin-right: .5em;
 }

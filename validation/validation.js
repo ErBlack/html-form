@@ -28,7 +28,7 @@ function validateDevidedBySeven({target}) {
 
 function updateStats() {
     const fields = Array.from(form.elements).filter(isField);
-    const validFields = fields.filter(({validationMessage}) => !validationMessage);
+    const validFields = fields.filter(({validity}) => validity.valid);
 
     total.innerText = `В форме ${messageFields(fields.length)}`;
     valid.innerText = `${messageFields(validFields.length)} ${messageValid(validFields.length)}.`
@@ -38,3 +38,15 @@ form.addEventListener('input', updateStats);
 form.addEventListener('change', updateStats);
 form.addEventListener('reset', () => setTimeout(updateStats));
 updateStats();
+
+form.addEventListener('click', function(e) {
+    if (!e.ctrlKey) {
+        return;
+    }
+
+    if (!isField(e.target)) {
+        return;
+    }
+
+    e.target.reportValidity();
+})

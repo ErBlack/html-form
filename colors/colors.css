@@ -1,0 +1,43 @@
+@import "../lib/styles/theme.css" screen;
+@import "../lib/styles/font.css" screen;
+
+@import "../lib/styles/fields.css" screen;
+@import "../lib/styles/form.css" screen;
+@import "../lib/styles/iframe.css" screen;
+@import "../lib/styles/layout.css" screen;
+
+
+input[type="color"]
+{
+    width: 12em;
+    height: 12em;
+}
+
+label
+{
+    display: flex;
+
+    font-family: monospace;
+}
+
+fieldset
+{
+    margin-bottom: 1em;
+}
+
+input[type="color"]
+{
+    display: block;
+
+    margin: 0 auto 1em auto;
+}
+
+.caption
+{
+    flex: 0 0 1em;
+}
+
+input[type="range"]
+{
+    flex-grow: 1;
+}

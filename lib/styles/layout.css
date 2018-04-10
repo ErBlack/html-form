@@ -11,20 +11,20 @@
     flex: 0 0 auto;
 
     box-sizing: border-box;
+    min-width: 333px;
 }
 
-@media all and (orientation: landscape) {
+@media all and (orientation: landscape) and (min-width: 667px) {
     .section
     {
         width: 50vw;
     }
 }
 
-@media all and (orientation: portrait) {
+@media all and (orientation: portrait), all and (max-width: 667px) {
     .section
     {
         width: 100vw;
-        min-height: 50vh;
     }
 
     .article

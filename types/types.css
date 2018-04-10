@@ -1,0 +1,31 @@
+@import "../lib/styles/theme.css" screen;
+@import "../lib/styles/font.css" screen;
+
+@import "../lib/styles/fields.css" screen;
+@import "../lib/styles/form.css" screen;
+@import "../lib/styles/iframe.css" screen;
+@import "../lib/styles/label.css" screen;
+@import "../lib/styles/layout.css" screen;
+
+.caption
+{
+    flex: 0 0 7em;
+
+    margin-right: 0.5em;
+
+    line-height: 1.5em;
+}
+
+input:not([type="radio"]):not([type="checkbox"]):not([type="color"]),
+select,
+textarea
+{
+    flex: 1 0 auto;
+
+    max-width: calc(100% - 7em);
+}
+
+label
+{
+    margin-bottom: 0.5em;
+}

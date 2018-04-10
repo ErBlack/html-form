@@ -1,9 +1,11 @@
-@import "styles/theme.css" screen;
-@import "styles/layout.css" screen;
-@import "styles/font.css" screen;
-@import "styles/fields.css" screen;
-@import "styles/form.css" screen;
-@import "styles/label.css" screen;
+@import "../lib/styles/theme.css" screen;
+@import "../lib/styles/font.css" screen;
+
+@import "../lib/styles/fields.css" screen;
+@import "../lib/styles/form.css" screen;
+@import "../lib/styles/iframe.css" screen;
+@import "../lib/styles/label.css" screen;
+@import "../lib/styles/layout.css" screen;
 
 #changed
 {
@@ -32,8 +34,6 @@ label
 {
     display: grid;
 
-    margin-right: -1em;
-
     grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-rows: 20% 20% 20% 20% 20%;
 }
@@ -42,7 +42,9 @@ textarea,
 input[type="text"],
 select
 {
-    flex-grow: 1;
+    flex: 1 0 auto;
+
+    max-width: calc(100% - 7em);
 }
 
 input[type="radio"],

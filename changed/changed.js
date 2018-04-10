@@ -52,7 +52,7 @@ form.addEventListener('change', updateStats);
 form.addEventListener('reset', () => setTimeout(updateStats));
 updateStats();
 
-window.addEventListener('beforeunload', function(e) {
+window.addEventListener('beforeunload', (e) => {
     if (isChanged(form)) {
         e.returnValue = 'В форме есть несохранённые изменения';
 

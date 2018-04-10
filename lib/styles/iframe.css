@@ -1,0 +1,27 @@
+iframe {
+    box-sizing: border-box;
+}
+
+@media all and (orientation: landscape)
+{
+    iframe
+    {
+        min-height: 100vh;
+    }
+}
+
+@media all and (orientation: portrait)
+{
+    iframe
+    {
+        min-height: 50vh;
+    }
+}
+
+
+@media all and (orientation: portrait), all and (max-width: 667px) {
+    iframe.section
+    {
+        flex-grow: 1;
+    }
+}

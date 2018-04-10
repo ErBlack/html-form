@@ -1,0 +1,38 @@
+@import "../lib/styles/theme.css" screen;
+@import "../lib/styles/font.css" screen;
+
+@import "../lib/styles/fields.css" screen;
+@import "../lib/styles/form.css" screen;
+@import "../lib/styles/iframe.css" screen;
+@import "../lib/styles/label.css" screen;
+@import "../lib/styles/layout.css" screen;
+
+#valid
+{
+    margin-bottom: 1em;
+}
+
+.row
+{
+    margin-bottom: 1em; 
+}
+
+.caption
+{
+    flex: 0 0 7em;
+}
+
+textarea,
+input[type="text"],
+input[type="number"],
+input[type="email"]
+{
+    flex: 1 0 auto;
+
+    max-width: calc(100% - 7em);
+}
+
+input:invalid
+{
+    box-shadow: 0 0 1em crimson;
+}

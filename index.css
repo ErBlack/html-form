@@ -1,4 +1,4 @@
-@import "styles/theme.css" screen;
+@import "lib/styles/theme.css" screen;
 
 body
 {
@@ -11,6 +11,16 @@ body
 
     font-family: sans-serif;
     background-color: var(--color-yandex);
+}
+
+li
+{
+    list-style: none;
+}
+
+li::before
+{
+    content: '→ ';
 }
 
 a:not(:hover)

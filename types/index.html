@@ -100,16 +100,7 @@
         </label>
         <button type="submit">Сохранить</button>
     </form>
-    <iframe src="../get" frameborder="0" id="frame" name="form-result" class="section"></iframe>
-    <script>
-        document.getElementById('frame').style.backgroundImage = `url(https://disk.yandex.net/qr/?text=${
-            encodeURIComponent(
-                String(location.protocol + '//' +
-                    location.host +
-                    location.pathname
-                )
-            )}&format=svg)`;
-    </script>
+    <iframe src="../get" frameborder="0" id="frame" name="form-result" class="section" style="background-image: url('https://disk.yandex.net/qr/?text=http%3A%2F%2Ferblack.me%2Fhtml-form%2Ftypes%2F&format=svg');"></iframe>
 </body>
 
 </html>

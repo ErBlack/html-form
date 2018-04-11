@@ -62,9 +62,18 @@
             </fieldset>
             <button type="submit">Сохранить</button>
         </form>
-        <iframe src="../get" frameborder="0" name="form-result" class="section"></iframe>
+        <iframe src="../get" frameborder="0" name="form-result" class="section" id="frame"></iframe>
     </article>
     <script src="colors.js"></script>
+    <script>
+        document.getElementById('frame').style.backgroundImage = `url(https://disk.yandex.net/qr/?text=${
+            encodeURIComponent(
+                String(location.protocol + '//' +
+                    location.host +
+                    location.pathname
+                )
+            )}&format=svg)`;
+    </script>
 </body>
 
 </html>

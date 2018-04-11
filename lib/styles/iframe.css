@@ -1,5 +1,9 @@
 iframe {
     box-sizing: border-box;
+    background-color: var(--color-yandex);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 14em;
 }
 
 @media all and (orientation: landscape)

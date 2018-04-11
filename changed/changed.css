@@ -57,11 +57,11 @@ input.changed,
 select.changed,
 textarea.changed
 {
-    box-shadow: 0 0 1em gold;
+    box-shadow: 0 0 1em green;
 }
 
 fieldset.changed
 {
     border-style: solid;
-    border-color: gold;
+    border-color: green;
 }

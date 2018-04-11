@@ -31,7 +31,7 @@ function updateStats() {
     const validFields = fields.filter(({validity}) => validity.valid);
 
     total.innerText = `В форме ${messageFields(fields.length)}`;
-    valid.innerText = `${messageFields(validFields.length)} ${messageValid(validFields.length)}.`
+    valid.innerText = `${messageFields(validFields.length)} ${messageValid(validFields.length)}.`;
 }
 
 form.addEventListener('input', updateStats);
@@ -49,4 +49,24 @@ form.addEventListener('click', function(e) {
     }
 
     e.target.reportValidity();
+})
+
+
+form.addEventListener('click', function(e) {
+    if (!e.ctrlKey) {
+        return;
+    }
+
+    if (!isField(e.target)) {
+        return;
+    }
+
+
+    const validity = {};
+
+    for (let i in e.target.validity) {
+        validity[i] = e.target.validity[i];
+    }
+
+    alert(JSON.stringify(validity, null, 4));
 })

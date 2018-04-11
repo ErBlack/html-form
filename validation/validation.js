@@ -8,9 +8,9 @@ const {
     messageValid
 } = plural;
 
-document.getElementById('custom').addEventListener('input', validateDevidedBySeven);
+document.getElementById('custom').addEventListener('input', customValidation);
 
-function validateDevidedBySeven({target}) {
+function customValidation({target}) {
     if (target.value !== '') {
         if (isNaN(target.value)) {
             target.setCustomValidity(`${target.value} даже не число`);
